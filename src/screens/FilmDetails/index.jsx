@@ -12,7 +12,7 @@ const FilmDetails = ({ route }) => {
   return (
     <SafeAreaView className="w-full h-full flex items-center justify-center p-2 opacity-90 bg-black">
       <View className="w-[85%] h-[85%] bg-white rounded-lg p-2">
-        <ScrollView className="w-full h-full">
+        <ScrollView className="w-full h-full flex flex-col space-y-2">
           <TouchableOpacity onPress={() => navigation.goBack()} className="w-max h-max flex flex-row space-x-2 items-center">
             <IconII name="arrow-back" size={24} color="black" />
             <Text className="flex flex-1 h-max text-sm text-black font-bold">
@@ -22,12 +22,12 @@ const FilmDetails = ({ route }) => {
 
           <View className="w-full h-max flex items-center justify-center">
             <FastImage
-              className="w-48 h-80"
+              className="w-64 h-96"
               source={{
                 uri: `https://image.tmdb.org/t/p/w500${filmInfo.poster_path}`,
                 priority: FastImage.priority.high,
               }}
-              resizeMode={FastImage.resizeMode.contain}
+              resizeMode={FastImage.resizeMode.cover}
             />
           </View>
 
