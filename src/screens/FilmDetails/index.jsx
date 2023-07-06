@@ -39,7 +39,7 @@ const FilmDetails = ({ route }) => {
             <Text className="font-bold text-black">Oy Ortalaması: </Text> {filmInfo.vote_average && filmInfo.vote_average || "Oy Ortalaması bulunamadı"}
           </Text>
 
-          <Text className="w-full text-black">
+          <Text className="flex flex-1 text-black">
             {filmInfo.overview && filmInfo.overview || "Açıklama bulunamadı"}
           </Text>
 
